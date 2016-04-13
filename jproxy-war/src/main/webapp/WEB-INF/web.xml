@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <!-- Proxy Servlet -->
+    <servlet>
+        <servlet-name>jsonServlet</servlet-name>
+        <servlet-class>com.unknown.JsonServlet</servlet-class>
+        <load-on-startup>10</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jsonServlet</servlet-name>
+        <url-pattern>/bench-json</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>textServlet</servlet-name>
+        <servlet-class>com.unknown.PlaintextServlet</servlet-class>
+        <load-on-startup>10</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>textServlet</servlet-name>
+        <url-pattern>/bench-text</url-pattern>
+    </servlet-mapping>
+
+</web-app>
